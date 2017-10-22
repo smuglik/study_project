@@ -1,0 +1,9 @@
+﻿  main.cpp
+c:\users\smugl\onedrive\мага 3 семестр\алгоритмы компьютерной визуализации и анимации\lab_00\lab_00\main.cpp(30): warning C4244: аргумент: преобразование "GLdouble" в "float", возможна потеря данных
+c:\users\smugl\onedrive\мага 3 семестр\алгоритмы компьютерной визуализации и анимации\lab_00\lab_00\main.cpp(41): warning C4244: аргумент: преобразование "GLdouble" в "float", возможна потеря данных
+c:\users\smugl\onedrive\мага 3 семестр\алгоритмы компьютерной визуализации и анимации\lab_00\lab_00\main.cpp(78): warning C4244: аргумент: преобразование "GLdouble" в "GLfloat", возможна потеря данных
+c:\users\smugl\onedrive\мага 3 семестр\алгоритмы компьютерной визуализации и анимации\lab_00\lab_00\main.cpp(79): warning C4244: аргумент: преобразование "GLdouble" в "GLfloat", возможна потеря данных
+c:\users\smugl\onedrive\мага 3 семестр\алгоритмы компьютерной визуализации и анимации\lab_00\lab_00\main.cpp(81): warning C4244: аргумент: преобразование "GLdouble" в "GLfloat", возможна потеря данных
+c:\users\smugl\onedrive\мага 3 семестр\алгоритмы компьютерной визуализации и анимации\lab_00\lab_00\main.cpp(82): warning C4244: аргумент: преобразование "GLdouble" в "GLfloat", возможна потеря данных
+c:\users\smugl\onedrive\мага 3 семестр\алгоритмы компьютерной визуализации и анимации\lab_00\lab_00\main.cpp(66): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note:  см. объявление "sprintf"

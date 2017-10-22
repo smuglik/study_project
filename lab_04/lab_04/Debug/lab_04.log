@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\temp\study_project\lab_04\lab_04\main.cpp(149): warning C4305: аргумент: усечение из "double" к "GLclampf"
+  lab_04.vcxproj -> C:\temp\study_project\lab_04\Debug\lab_04.exe
+  lab_04.vcxproj -> C:\temp\study_project\lab_04\Debug\lab_04.pdb (Full PDB)
