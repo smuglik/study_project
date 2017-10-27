@@ -182,14 +182,26 @@ int main()
 		0.5, 0.5, 0.5,   0, 0, 1,  1, 1,
 	};
 
+	vec3 cubePositions[] = {
+		vec3(0.0f,  0.0f,  0.0f),
+		vec3(2.0f,  5.0f, -15.0f),
+		vec3(-1.5f, -2.2f, -2.5f),
+		vec3(-3.8f, -2.0f, -12.3f),
+		vec3(2.4f, -0.4f, -3.5f),
+		vec3(-1.7f,  3.0f, -7.5f),
+		vec3(1.3f, -2.0f, -2.5f),
+		vec3(1.5f,  2.0f, -2.5f),
+		vec3(1.5f,  0.2f, -1.5f),
+		vec3(-1.3f,  1.0f, -1.5f)
+	};
+
 	mat4 model; //  модельная матрица
 	model = rotate(model, radians(-45.0f), vec3(1.0f, 0.0f, 0.0f));
 	mat4 view; // матрица вида
 	// Сцена смещается в обратном направлении от того, куда мы хотим сместить камеру
 	view = translate(view, vec3(0.0f, 0.0f, -3.0f));
 	mat4 projection; // проекционная матрица
-	projection = perspective<GLfloat>(radians(45.0f), (GLfloat)WIDTH /
-		(GLfloat)HEIGHT, 0.1f, 100.0f);
+	projection = perspective<GLfloat>(radians(45.0f), (GLfloat)WIDTH / (GLfloat)HEIGHT, 0.1f, 100.0f);
 
 	unsigned int VBO, VAO;
 	glGenVertexArrays(1, &VAO);
@@ -211,6 +223,7 @@ int main()
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
+	
 	glEnable(GL_DEPTH_TEST); // тестирование буфера глубины
 	
 	while (!glfwWindowShouldClose(window)) { // главный цикл
@@ -256,7 +269,18 @@ int main()
 		glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, value_ptr(projection));
 
 		glBindVertexArray(VAO);
-		glDrawArrays(GL_TRIANGLES, 0, 100); // КОЛ-ВО ВЕРШИН
+		for (unsigned int i = 0; i < 10; i++)
+		{
+			// calculate the model matrix for each object and pass it to shader before drawing
+			mat4 model;
+			model = translate(model, cubePositions[i]);
+			float angle = 20.0f * i;
+			model = rotate(model, radians(angle), vec3(1.0f, 0.3f, 0.5f));
+		//	shaderProgram.setMat4("model", model);
+			glUniformMatrix4fv(modelLoc, 1, GL_FALSE, value_ptr(model));
+			glDrawArrays(GL_TRIANGLES, 0, 36);
+		}
+		//glDrawArrays(GL_TRIANGLES, 0, 100); // КОЛ-ВО ВЕРШИН
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, texture);
 

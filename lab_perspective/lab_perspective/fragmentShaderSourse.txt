@@ -9,5 +9,5 @@ uniform sampler2D ourTexture;
 
 void main()
 {
-color = texture(ourTexture, ourTex)*vec4(ourColor, 1);
+	color = texture(ourTexture, ourTex)*vec4(ourColor, 1);
 };

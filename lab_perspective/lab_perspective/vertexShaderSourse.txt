@@ -13,7 +13,7 @@ uniform mat4 transform;
 
 void main()
 {
-gl_Position = projection * view * model * transform * vec4(aPos.x, aPos.y, aPos.z, 1.0);
-ourTex = vec2(aTex.x, aTex.y);
-ourColor = aColor;
+	gl_Position = projection * view * model * transform * vec4(aPos.x, aPos.y, aPos.z, 1.0);
+	ourTex = vec2(aTex.x, 1 - aTex.y);
+	ourColor = aColor;
 }; 	

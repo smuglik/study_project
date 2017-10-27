@@ -72,22 +72,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>c:\opengl\glew-1.13.0\include;c:\opengl\stb-master;c:\opengl\glm;c:\opengl\glfw-3.2.1.bin.WIN32\include;$(IncludePath)</IncludePath>
-    <LibraryPath>c:\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>c:\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\opengl\glew-1.13.0\lib;c:\opengl\glm;c:\opengl\stb-master;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>c:\opengl\glew-1.13.0\include;c:\opengl\stb-master;c:\opengl\glm;c:\opengl\glfw-3.2.1.bin.WIN32\include;$(IncludePath)</IncludePath>
-    <LibraryPath>c:\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>c:\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\opengl\glew-1.13.0\lib;c:\opengl\glm;c:\opengl\stb-master;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>c:\opengl\glew-1.13.0\include;c:\opengl\stb-master;c:\opengl\glm;c:\opengl\glfw-3.2.1.bin.WIN32\include;$(IncludePath)</IncludePath>
-    <LibraryPath>c:\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>c:\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\opengl\glew-1.13.0\lib;c:\opengl\glm;c:\opengl\stb-master;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>c:\opengl\glew-1.13.0\include;c:\opengl\stb-master;c:\opengl\glm;c:\opengl\glfw-3.2.1.bin.WIN32\include;$(IncludePath)</IncludePath>
-    <LibraryPath>c:\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>c:\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\opengl\glew-1.13.0\lib;c:\opengl\glm;c:\opengl\stb-master;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
