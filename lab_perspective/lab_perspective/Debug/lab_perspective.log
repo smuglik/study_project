@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c:\temp\study_project\lab_perspective\lab_perspective\source.cpp(217): warning C4305: аргумент: усечение из "double" к "GLclampf"
+c:\temp\study_project\lab_perspective\lab_perspective\source.cpp(224): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+  lab_perspective.vcxproj -> C:\temp\study_project\lab_perspective\Debug\lab_perspective.exe
+  lab_perspective.vcxproj -> C:\temp\study_project\lab_perspective\Debug\lab_perspective.pdb (Full PDB)
