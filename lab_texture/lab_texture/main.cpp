@@ -49,8 +49,10 @@ void processInput(GLFWwindow* window) {
 
 int main()
 {
-	int w1, h1, nrChannels;
-	unsigned char *data = stbi_load("grass.jpg", &w1, &h1, &nrChannels, 0);
+	int w1, h1, nrChannels1;
+	unsigned char *data = stbi_load("grass.jpg", &w1, &h1, &nrChannels1, 0);
+	int w2, h2, nrChannels2;
+	unsigned char *data1 = stbi_load("smile.png", &w2, &h2, &nrChannels2, 0);
 
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -112,9 +114,10 @@ int main()
 	glDeleteShader(vertexShader);
 	glDeleteShader(fragmentShader);
 
-	GLuint texture;
-	glGenTextures(1, &texture);
-	glBindTexture(GL_TEXTURE_2D, texture);
+	GLuint texture1, texture2;
+	// текстура 1
+	glGenTextures(1, &texture1);
+	glBindTexture(GL_TEXTURE_2D, texture1);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
@@ -122,8 +125,17 @@ int main()
 	glGenerateMipmap(GL_TEXTURE_2D);
 	stbi_image_free(data);
 	glBindTexture(GL_TEXTURE_2D, 0);
-
-	GLint nVertex = 6;
+	// текстура 2
+	glGenTextures(1, &texture2);
+	glBindTexture(GL_TEXTURE_2D, texture2);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, w2, h2, 0, GL_RGB, GL_UNSIGNED_BYTE, data1);
+	glGenerateMipmap(GL_TEXTURE_2D);
+	stbi_image_free(data1);
+	glBindTexture(GL_TEXTURE_2D, 1);
+	GLint nVertex = 12;
 
 	float vertices[] = {
 		0, 0, 0, 0, 1, 0, 0, 0,
@@ -134,21 +146,20 @@ int main()
 		0, 0.5, 0, 0, 1, 0, 0, 1,
 		0.5, 0.5, 0, 0, 1, 0, 1, 1,
 
-	};
+		-1, 0, 0, 0, 1, 0, 1, 0,
+		-1, -0.5, 0, 0, 1, 0, 0, 0,
+		-0.5, -0.5, 0, 0, 1, 0, 0, 1,
 
-	/*vec4 vec(1.0f, 0.0f, 0.0f, 1.0f);
-	mat4 trans;
-	trans = translate(trans, vec3(1.0f, 1.0f, 0.0f));
-	vec = trans * vec;
-	//cout << vec.x << vec.y << vec.z << endl;
-	trans = rotate(trans, radians(90.0f),
-		vec3(0.0, 0.0, 1.0));
-	trans = scale(trans, vec3(0.5, 0.5, 0.5));*/
+		-0.5, -0.5, 0, 0, 1, 0, 0, 1,
+		-0.5, 0, 0, 0, 1, 0, 1, 1,
+		-1, 0, 0, 0, 1, 0, 1, 0,
+
+	};
 
 	unsigned int VBO, VAO;
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &VBO);
-
+	
 	glBindVertexArray(VAO);
 
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
@@ -178,24 +189,16 @@ int main()
 		float timeValue = glfwGetTime();
 		float greenValue = sin(timeValue) / 2.0f + 0.5f;
 
-		/*int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
-		glUniform4f(vertexColorLocation, 1.0f, greenValue, 0.0f, 1.0f);
-
-		float positValue = sin(timeValue) / 2.0;
-		int vertexPosLocation = glGetUniformLocation(shaderProgram, "pos");
-		glUniform3f(vertexPosLocation, positValue, 0, 0);
-
-		mat4 trans;
-		trans = translate(trans, vec3(0.0, 0.0, 0.0));
-		trans = rotate(trans, (float)glfwGetTime() * 50, vec3(0.0f, 1.0f, 0.0f));
-
-		unsigned int transformLoc = glGetUniformLocation(shaderProgram, "transform");
-		glUniformMatrix4fv(transformLoc, 1, GL_FALSE, value_ptr(trans));*/
+		
+		glActiveTexture(GL_TEXTURE0);
+		glBindTexture(GL_TEXTURE_2D, texture1);
+		glUniform1i(glGetUniformLocation(shaderProgram, "ourTexture1"), 0);
+		glActiveTexture(GL_TEXTURE1);
+		glBindTexture(GL_TEXTURE_2D, texture2);
+		glUniform1i(glGetUniformLocation(shaderProgram, "ourTexture2"), 0);
 
 		glBindVertexArray(VAO);
 		glDrawArrays(GL_TRIANGLES, 0, nVertex);
-		glActiveTexture(GL_TEXTURE0);
-		glBindTexture(GL_TEXTURE_2D, texture);
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();
