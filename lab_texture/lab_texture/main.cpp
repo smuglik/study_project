@@ -184,7 +184,7 @@ int main()
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		//draw triangle
-		glUseProgram(shaderProgram);
+		
 
 		float timeValue = glfwGetTime();
 		float greenValue = sin(timeValue) / 2.0f + 0.5f;
@@ -193,9 +193,12 @@ int main()
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, texture1);
 		glUniform1i(glGetUniformLocation(shaderProgram, "ourTexture1"), 0);
+		
 		glActiveTexture(GL_TEXTURE1);
 		glBindTexture(GL_TEXTURE_2D, texture2);
 		glUniform1i(glGetUniformLocation(shaderProgram, "ourTexture2"), 0);
+
+		glUseProgram(shaderProgram);
 
 		glBindVertexArray(VAO);
 		glDrawArrays(GL_TRIANGLES, 0, nVertex);
