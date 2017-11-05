@@ -1,6 +1,3 @@
-// sample_shader.cpp : Defines the entry point for the console application.
-//
-
 //GLFW
 #define _CRT_SECURE_NO_WARNINGS
 #define GLEW_STATIC

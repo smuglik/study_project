@@ -1,5 +1,5 @@
 ﻿  main.cpp
-c:\temp\study_project\lab_texture\lab_texture\main.cpp(183): warning C4305: аргумент: усечение из "double" к "GLclampf"
-c:\temp\study_project\lab_texture\lab_texture\main.cpp(189): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+c:\temp\study_project\lab_texture\lab_texture\main.cpp(180): warning C4305: аргумент: усечение из "double" к "GLclampf"
+c:\temp\study_project\lab_texture\lab_texture\main.cpp(186): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
   lab_texture.vcxproj -> C:\temp\study_project\lab_texture\Debug\lab_texture.exe
   lab_texture.vcxproj -> C:\temp\study_project\lab_texture\Debug\lab_texture.pdb (Full PDB)
