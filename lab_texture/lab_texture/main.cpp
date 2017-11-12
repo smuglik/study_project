@@ -46,11 +46,6 @@ void processInput(GLFWwindow* window) {
 
 int main()
 {
-	int w1, h1, nrChannels1;
-	unsigned char *data = stbi_load("grass.jpg", &w1, &h1, &nrChannels1, 0);
-	int w2, h2, nrChannels2;
-	unsigned char *data1 = stbi_load("smile.png", &w2, &h2, &nrChannels2, 0);
-
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -111,27 +106,59 @@ int main()
 	glDeleteShader(vertexShader);
 	glDeleteShader(fragmentShader);
 
-	GLuint texture1, texture2;
+	unsigned int ourTexture1, ourTexture2;
 	// текстура 1
-	glGenTextures(1, &texture1);
-	glBindTexture(GL_TEXTURE_2D, texture1);
+	//----------
+	glGenTextures(1, &ourTexture1);
+	glBindTexture(GL_TEXTURE_2D, ourTexture1);
+	//настройка параметров развертывания текстуры
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+	//настройка параметров фильтрации
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, w1, h1, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-	glGenerateMipmap(GL_TEXTURE_2D);
+	//-----------------------
+	int width, height, numberChannels;
+	//--------------------------
+	stbi_set_flip_vertically_on_load(true); // отобразить текстуру по оси Y
+	//----------------
+	unsigned char *data = stbi_load("grass.jpg", &width, &height, &numberChannels, 0);
+	//----------------
+	if (data) {
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+		glGenerateMipmap(GL_TEXTURE_2D);
+	}
+	else {
+		cout << "Failed to load texture" << endl;
+	}
 	stbi_image_free(data);
 	glBindTexture(GL_TEXTURE_2D, 0);
+	
 	// текстура 2
-	glGenTextures(1, &texture2);
-	glBindTexture(GL_TEXTURE_2D, texture2);
+	glGenTextures(1, &ourTexture2);
+	glBindTexture(GL_TEXTURE_2D, ourTexture2);
+	//настройка параметров развертывания текстуры
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+	//настройка параметров фильтрации
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, w2, h2, 0, GL_RGB, GL_UNSIGNED_BYTE, data1);
-	glGenerateMipmap(GL_TEXTURE_2D);
-	stbi_image_free(data1);
+	
+	data = stbi_load("itmo_logo_transp_en.png", &width, &height, &numberChannels, 0);
+
+	if (data) {
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+		glGenerateMipmap(GL_TEXTURE_2D);
+	}
+	else {
+		cout << "Failed to load texture" << endl;
+	}
+	stbi_image_free(data);
 	glBindTexture(GL_TEXTURE_2D, 1);
+	/*glUseProgram(shaderProgram);
+	glUniform1i(glGetUniformLocation(shaderProgram, "ourTexture1"), 0);
+	glUniform1i(glGetUniformLocation(shaderProgram, "ourTexture2"), 1);
+	*/
 	GLint nVertex = 12;
 
 	float vertices[] = {
@@ -185,20 +212,22 @@ int main()
 
 		float timeValue = glfwGetTime();
 		float greenValue = sin(timeValue) / 2.0f + 0.5f;
-
-		
+		glUseProgram(shaderProgram);
+		//Привязываем текстуры к соответствующим
 		glActiveTexture(GL_TEXTURE0);
-		glBindTexture(GL_TEXTURE_2D, texture1);
+		glBindTexture(GL_TEXTURE_2D, ourTexture1);
 		glUniform1i(glGetUniformLocation(shaderProgram, "ourTexture1"), 0);
-		
-		glActiveTexture(GL_TEXTURE1);
-		glBindTexture(GL_TEXTURE_2D, texture2);
-		glUniform1i(glGetUniformLocation(shaderProgram, "ourTexture2"), 0);
 
+		glActiveTexture(GL_TEXTURE1);
+		glBindTexture(GL_TEXTURE_2D, ourTexture2);
+		glUniform1i(glGetUniformLocation(shaderProgram, "ourTexture2"), 1);
+
+		//активируем шейдерную программу
 		glUseProgram(shaderProgram);
 
 		glBindVertexArray(VAO);
 		glDrawArrays(GL_TRIANGLES, 0, nVertex);
+		glBindVertexArray(0);
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();

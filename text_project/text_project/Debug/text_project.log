@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c:\temp\study_project\text_project\text_project\shader.h(61): warning C4101: infoLog: неиспользованная локальная переменная
+c:\temp\study_project\text_project\text_project\shader.h(60): warning C4101: success: неиспользованная локальная переменная
+  text_project.vcxproj -> C:\temp\study_project\text_project\Debug\text_project.exe
+  text_project.vcxproj -> C:\temp\study_project\text_project\Debug\text_project.pdb (Full PDB)

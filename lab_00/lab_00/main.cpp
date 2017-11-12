@@ -4,6 +4,7 @@
 #include <stdio.h>
 
 using namespace std;
+//Глобальные переменные
 const int screenWidth = 640;  // Высота и ширина окна, в котором рисуется график 
 const int screenHeight = 480;
 GLdouble start_t = -30, end_t = 30, step_t = 0.01; // Диапазон отсчетов и шаг 
@@ -38,23 +39,23 @@ void onDisplay() {
 		glVertex2d(t, f);
 	}
 	glEnd();
-
+	/////////////////
 	setWindow(start_t, end_t, new_start_y, new_end_y);
 	setViewport(0, screenWidth, 0, screenHeight);
 	glColor3d(0.0, 0.0, 0.0);
 	glBegin(GL_LINES);
 	glVertex2d(0, start_y * 30);
 	glVertex2d(0, end_y * 30);
-
+	////////////////
 	glVertex2d(start_t, 0);
 	glVertex2d(end_t, 0);
 	glEnd();
-
+	///////////////
 	glBegin(GL_TRIANGLES);
 	glVertex2d(-1, 29);
 	glVertex2d(1, 29);
 	glVertex2d(0, 30);
-
+	///////////////
 	glVertex2d(29, 1);
 	glVertex2d(29, -1);
 	glVertex2d(30, 0);
@@ -106,7 +107,6 @@ void initExtra() {
 	glMatrixMode(GL_PROJECTION);  // Функция, задающая ортографическую модель 
 	glLoadIdentity();  // Установка единичной проекционной матрицы 
 	gluOrtho2D(0, (GLdouble)screenWidth, 0, (GLdouble)screenHeight);
-
 	glMatrixMode(GL_PROJECTION);  // Функция, задающая ортографическую модель 
 	glLoadIdentity();  // Установка единичной проекционной матрицы 
 	gluOrtho2D(1.0, 5.0, 2.5, 3.8); // Задание мирового окна 
