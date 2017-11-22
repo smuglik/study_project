@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\temp\study_project\lab_draw_3d_object\lab_draw_3d_object\source.cpp(5): warning C4305: аргумент: усечение из "double" к "GLclampf"
+  lab_draw_3D_object.vcxproj -> C:\temp\study_project\lab_draw_3D_object\Debug\lab_draw_3D_object.exe
+  lab_draw_3D_object.vcxproj -> C:\temp\study_project\lab_draw_3D_object\Debug\lab_draw_3D_object.pdb (Full PDB)

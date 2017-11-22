@@ -32,27 +32,7 @@ vec3 cameraUp = vec3(0.0f, 1.0f, 0.0f);
 mat4 view = lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
 bool keys[1024];
 
-void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode) {
-	/*vec3 cameraPos = vec3(0.0f, 0.0f, 3.0f);
-	vec3 cameraFront = vec3(0.0f, 0.0f, -1.0f);
-	vec3 cameraUp = vec3(0.0f, 1.0f, 0.0f);
-	mat4 view = lookAt(cameraPos, cameraPos + cameraFront, cameraUp);*/
-
-	if (action == GLFW_PRESS)
-		keys[key] = true;
-	else if (action == GLFW_RELEASE)
-		keys[key] = false;
-
-	GLfloat cameraSpeed = 0.05f;
-	if (key == GLFW_KEY_W)
-		cameraPos += cameraSpeed * cameraFront;
-	if (key == GLFW_KEY_S)
-		cameraPos -= cameraSpeed * cameraFront;
-	if (key == GLFW_KEY_A)
-		cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp))*cameraSpeed;
-	if (key == GLFW_KEY_D)
-		cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp))*cameraSpeed;
-}
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
 void do_movement() {
 	// Управление камерой
@@ -87,6 +67,8 @@ int main() {
 	glfwMakeContextCurrent(window);
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
+	glfwSetKeyCallback(window, key_callback);
+	glfwSetInputMode(window, GLFW_STICKY_KEYS, 1);
 	// Инициализация GLEW для настройки указателей на функции OpenGL
 	glewExperimental = GL_TRUE;
 	glewInit();
@@ -243,6 +225,7 @@ int main() {
 		// Отрисовка фона
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		glfwPollEvents();
 
 		// Привязываем текстуры к соответствующим текстурным 
 		glActiveTexture(GL_TEXTURE0);
@@ -281,7 +264,7 @@ int main() {
 		// GLFW: переключение буферов и опрос IO событий (нажатие клавиш клавиатуры или мыши, и т.п.)
 		glfwSwapBuffers(window);
 		glfwPollEvents();
-		do_movement();
+		//do_movement();
 	}
 
 	// Дополнительно: освобождаем ресурсы, после того как их использовали
@@ -294,13 +277,30 @@ int main() {
 	glfwTerminate();
 	return 0;
 }
+
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode) {
+	cout << key << endl;
+	GLfloat cameraSpeed = 0.01f;
+	if (keys[GLFW_KEY_W] == GLFW_PRESS) {
+		cameraPos += cameraSpeed * cameraFront;
+	}
+	if (keys[GLFW_KEY_S] == GLFW_PRESS) {
+		cameraPos -= cameraSpeed * cameraFront;
+	}
+
+	if (keys[GLFW_KEY_A] == GLFW_PRESS) {
+		cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp))*cameraSpeed;
+	}
+	if (keys[GLFW_KEY_D] == GLFW_PRESS) {
+		cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp))*cameraSpeed;
+	}
+}
 //функция обратного вызова для обработки событий
 
 
 // Обработка входных сообщений: опрос GLFW были ли нажаты/отжаты нужные клавиши 
 void processInput(GLFWwindow *window)
 {
-	do_movement();
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true);
 
