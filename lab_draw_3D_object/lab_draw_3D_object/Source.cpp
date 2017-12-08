@@ -49,44 +49,37 @@ void display() {
 
 	/* draw scene */
 	glPushMatrix();
-	glPushMatrix();
 
-	/*glTranslatef(1, 0, 0);
+	//glTranslatef(-5.0, 1.5, 0.0);
+	//glutSolidTeapot(0.25);
+
+	glTranslatef(6.0, 3.0, 0.0);
+	glutSolidTeapot(0.25);
+
+	glTranslatef(6.0, -3.0, 0.0);
+	glutSolidTeapot(0.25);
+
+	glTranslatef(0.0, 2, 0.0);
+	glutSolidTeapot(0.25);
+
+	glTranslatef(0.0, -2, 0.0);
 	glutWireTeapot(0.25);
 
-	glTranslatef(1, 0, 0);
+
+
+
+	glColor3f(0.8, 0.2, 0.1);
+	glTranslatef(0.0, 0, 0.0);
+	glutWireCube(0.3);
+
+	/*glTranslatef(0.0, -2, 0.0);
 	glutWireTeapot(0.25);
+	*/
+	/*glTranslatef(-5.0, 1.5, -10.0);
+	glutSolidTeapot(0.25);
 
-	glTranslatef(-3, 0, 0);
-	glutWireTeapot(0.25);
-
-	glTranslatef(0, 1, 0);
-	glutWireTeapot(0.25);
-
-	glTranslatef(1, 1, 0);
-	glutWireTeapot(0.25);*/
-
-	glTranslatef(5, 1, 1);
-	glutWireTeapot(1);
-	
-
-	/*glTranslatef(0, 2, 1);
-	glutWireTeapot(0.25);
-	glTranslatef(1, 1, -5);
-	glutWireTeapot(0.25);
-	glTranslatef(-1, 1, 0);
-	glutWireTeapot(0.25);
-	/*glTranslatef(-2, 0, 0);
-	glutWireTeapot(0.25);*/
-	/*glTranslatef(0, 0, -3);
-	glutWireTeapot(1);                // middle teapot
-	glTranslatef(0, 2, 0);
-	glutSolidTeapot(1);               // top teapot
-	glPopMatrix();
-
-	glTranslatef(0, -2, -1);
-	glutSolidTeapot(1);    */           // bottom teapot
-
+	glTranslatef(-5.0, 1.5, -10.0);
+	glutSolidTeapot(0.25);*/
 	glPopMatrix();
 
 	/* flush drawing routines to the window */
@@ -120,12 +113,14 @@ int main(int argc, char * argv[]) {
 	/* define the projection transformation */
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(60, 1, 1, 10);
+	gluPerspective(60, 1, 1, 100);
 
 	/* define the viewing transformation */
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	gluLookAt(1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+	gluLookAt(20.0, 1.0, 0.0,   // смотрим "из"
+		0, 0, 0, //смотрим "на"
+		0.0, 1.0, 0.0); // положение вверх
 
 	/* tell GLUT to wait for events */
 	glutMainLoop();
