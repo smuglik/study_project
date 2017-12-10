@@ -73,29 +73,29 @@
     <OutDir>c:\temp\.vswork\$(ProjectName)\$(Configuration)\</OutDir>
     <IntDir>c:\temp\.vswork\$(ProjectName)\$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>c:\Temp\opengl\glew-1.13.0\include;c:\Temp\opengl\glfw-3.2.1.bin.WIN32\include;c:\Temp\opengl\stb;c:\Temp\opengl\glm;c:\Temp\opengl\assimp-4.0.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>c:\Temp\opengl\assimp-4.0.1\lib;c:\Temp\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\Temp\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>c:\opengl\glew-1.13.0\include;c:\opengl\glfw-3.2.1.bin.WIN32\include;c:\opengl\stb-master;c:\opengl\glm;c:\opengl\assimp-4.0.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>c:\opengl\assimp-4.0.1\lib;c:\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>c:\temp\.vswork\$(ProjectName)\$(Configuration)\</OutDir>
     <IntDir>c:\temp\.vswork\$(ProjectName)\$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>c:\Temp\opengl\glew-1.13.0\include;c:\Temp\opengl\glfw-3.2.1.bin.WIN32\include;c:\Temp\opengl\stb;c:\Temp\opengl\glm;c:\Temp\opengl\assimp-4.0.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>c:\Temp\opengl\assimp-4.0.1\lib;c:\Temp\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\Temp\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>c:\opengl\glew-1.13.0\include;c:\opengl\glfw-3.2.1.bin.WIN32\include;c:\opengl\stb-master;c:\opengl\glm;c:\opengl\assimp-4.0.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>c:\opengl\assimp-4.0.1\lib;c:\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>c:\temp\.vswork\$(ProjectName)\$(Configuration)\</OutDir>
     <IntDir>c:\temp\.vswork\$(ProjectName)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>c:\Temp\opengl\glew-1.13.0\include;c:\Temp\opengl\glfw-3.2.1.bin.WIN32\include;c:\Temp\opengl\stb;c:\Temp\opengl\glm;c:\Temp\opengl\assimp-4.0.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>c:\Temp\opengl\assimp-4.0.1\lib;c:\Temp\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\Temp\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>c:\opengl\glew-1.13.0\include;c:\opengl\glfw-3.2.1.bin.WIN32\include;c:\opengl\stb-master;c:\opengl\glm;c:\opengl\assimp-4.0.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>c:\opengl\assimp-4.0.1\lib;c:\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>c:\temp\.vswork\$(ProjectName)\$(Configuration)\</OutDir>
     <IntDir>c:\temp\.vswork\$(ProjectName)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>c:\Temp\opengl\glew-1.13.0\include;c:\Temp\opengl\glfw-3.2.1.bin.WIN32\include;c:\Temp\opengl\stb;c:\Temp\opengl\glm;c:\Temp\opengl\assimp-4.0.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>c:\Temp\opengl\assimp-4.0.1\lib;c:\Temp\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\Temp\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>c:\opengl\glew-1.13.0\include;c:\opengl\glfw-3.2.1.bin.WIN32\include;c:\opengl\stb-master;c:\opengl\glm;c:\opengl\assimp-4.0.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>c:\opengl\assimp-4.0.1\lib;c:\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

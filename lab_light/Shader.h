@@ -1,17 +1,11 @@
-
 #ifndef SHADER_H
 #define SHADER_H
-
 // GLEW
 #ifndef GLEW_STATIC
 #define GLEW_STATIC
 #endif
-
 #include <GL/glew.h>
-
-
 #include <glm/glm.hpp>
-
 #include <string>
 #include <fstream>
 #include <sstream>
