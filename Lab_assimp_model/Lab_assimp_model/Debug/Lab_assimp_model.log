@@ -1,0 +1,13 @@
+﻿  main.cpp
+c:\temp\study_project\lab_assimp_model\lab_assimp_model\shader_m.h(56): warning C4101: infoLog: неиспользованная локальная переменная
+c:\temp\study_project\lab_assimp_model\lab_assimp_model\shader_m.h(55): warning C4101: success: неиспользованная локальная переменная
+c:\temp\study_project\lab_assimp_model\lab_assimp_model\main.cpp(99): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+c:\temp\study_project\lab_assimp_model\lab_assimp_model\main.cpp(173): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\temp\study_project\lab_assimp_model\lab_assimp_model\main.cpp(174): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\temp\study_project\lab_assimp_model\lab_assimp_model\main.cpp(178): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+c:\temp\study_project\lab_assimp_model\lab_assimp_model\main.cpp(179): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+c:\temp\study_project\lab_assimp_model\lab_assimp_model\main.cpp(181): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\temp\study_project\lab_assimp_model\lab_assimp_model\main.cpp(182): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\temp\study_project\lab_assimp_model\lab_assimp_model\main.cpp(191): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+  Lab_assimp_model.vcxproj -> C:\temp\study_project\Lab_assimp_model\Debug\Lab_assimp_model.exe
+  Lab_assimp_model.vcxproj -> C:\temp\study_project\Lab_assimp_model\Debug\Lab_assimp_model.pdb (Full PDB)
