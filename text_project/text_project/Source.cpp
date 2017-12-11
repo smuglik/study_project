@@ -158,6 +158,7 @@ int main()
 	// ”казываем OpenGL к каким текстурным юнитам принадлежат семплеры 
 
 	ourShader.use();
+	//ourShader.setInt("texture1", 1);
 	glUniform1i(glGetUniformLocation(ourShader.ID, "texture1"), 0);
 	ourShader.setInt("texture2", 1);
 	//ourShader.setInt("texture2", 1);

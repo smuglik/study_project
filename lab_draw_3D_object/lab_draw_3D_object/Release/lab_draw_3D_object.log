@@ -1,8 +1,114 @@
-﻿  Source.cpp
-  Создание кода
-  1 of 5 functions (20.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Создание кода завершено
-  lab_draw_3D_object.vcxproj -> C:\temp\study_project\lab_draw_3D_object\Release\lab_draw_3D_object.exe
-  lab_draw_3D_object.vcxproj -> C:\temp\study_project\lab_draw_3D_object\Release\lab_draw_3D_object.pdb (Full PDB)
+﻿Build started 11.12.2017 14:20:48.
+     1>Project "D:\study_project\lab_draw_3D_object\lab_draw_3D_object\lab_draw_3D_object.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Release\\" /Fd"Release\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
+         Source.cpp
+     1>Source.cpp(62): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(64): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(69): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(71): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(72): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(74): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(79): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(81): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(82): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(84): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(85): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(87): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(93): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(95): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(96): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(98): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(99): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(101): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(102): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(104): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(109): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(111): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(112): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(114): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(115): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(117): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(118): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(120): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(129): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(131): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(132): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(134): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(135): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(137): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(138): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(140): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(144): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(146): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(151): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(153): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(154): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(156): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(157): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(159): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(160): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(162): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(166): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(168): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(169): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(171): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(176): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(178): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(179): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(181): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(182): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(184): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(185): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(187): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(191): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(193): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(194): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(196): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(197): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(199): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(205): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(207): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(208): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(210): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(211): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(213): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(214): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(216): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(220): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(222): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(223): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(225): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(226): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(228): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(229): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(231): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(235): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(237): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(238): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(240): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(241): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(243): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(244): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(246): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(250): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(252): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(253): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(255): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(256): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(258): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(259): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>Source.cpp(261): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+       Link:
+         C:\Program Files\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\study_project\lab_draw_3D_object\Release\lab_draw_3D_object.exe" /INCREMENTAL:NO /NOLOGO opengl32.lib glew32s.lib glfw3.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\study_project\lab_draw_3D_object\Release\lab_draw_3D_object.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\study_project\lab_draw_3D_object\Release\lab_draw_3D_object.lib" /MACHINE:X86 /SAFESEH Release\Source.obj
+         Generating code
+         1 of 6 functions (16.7%) were compiled, the rest were copied from previous compilation.
+           0 functions were new in current compilation
+           0 functions had inline decision re-evaluated but remain unchanged
+         Finished generating code
+         lab_draw_3D_object.vcxproj -> D:\study_project\lab_draw_3D_object\Release\lab_draw_3D_object.exe
+     1>Done Building Project "D:\study_project\lab_draw_3D_object\lab_draw_3D_object\lab_draw_3D_object.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.37

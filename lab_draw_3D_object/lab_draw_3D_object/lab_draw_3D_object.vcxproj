@@ -71,23 +71,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>c:\opengl\freeglut-3.0.0\include;c:\opengl\glfw-3.2.1.bin.WIN32\include;c:\opengl\stb-master;c:\opengl\glm;c:\opengl\glew-1.13.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>c:\opengl\freeglut-3.0.0\lib;c:\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>c:\temp\opengl\freeglut-3.0.0\include;c:\temp\opengl\glfw-3.2.1.bin.WIN32\include;c:\temp\opengl\glew-1.13.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>c:\temp\opengl\freeglut-3.0.0\lib;c:\temp\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\temp\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>c:\opengl\freeglut-3.0.0\include;c:\opengl\glfw-3.2.1.bin.WIN32\include;c:\opengl\stb-master;c:\opengl\glm;c:\opengl\glew-1.13.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>c:\opengl\freeglut-3.0.0\lib;c:\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>c:\temp\opengl\freeglut-3.0.0\include;c:\temp\opengl\glfw-3.2.1.bin.WIN32\include;c:\temp\opengl\glew-1.13.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>c:\temp\opengl\freeglut-3.0.0\lib;c:\temp\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\temp\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>c:\opengl\freeglut-3.0.0\include;c:\opengl\glfw-3.2.1.bin.WIN32\include;c:\opengl\stb-master;c:\opengl\glm;c:\opengl\glew-1.13.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>c:\opengl\freeglut-3.0.0\lib;c:\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>c:\temp\opengl\freeglut-3.0.0\include;c:\temp\opengl\glfw-3.2.1.bin.WIN32\include;c:\temp\opengl\glew-1.13.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>c:\temp\opengl\freeglut-3.0.0\lib;c:\temp\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\temp\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>c:\opengl\freeglut-3.0.0\include;c:\opengl\glfw-3.2.1.bin.WIN32\include;c:\opengl\stb-master;c:\opengl\glm;c:\opengl\glew-1.13.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>c:\opengl\freeglut-3.0.0\lib;c:\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>c:\temp\opengl\freeglut-3.0.0\include;c:\temp\opengl\glfw-3.2.1.bin.WIN32\include;c:\temp\opengl\glew-1.13.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>c:\temp\opengl\freeglut-3.0.0\lib;c:\temp\opengl\glfw-3.2.1.bin.WIN32\lib-vc2015;c:\temp\opengl\glew-1.13.0\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

@@ -7,9 +7,9 @@ close all
 
 %% 3. Расчет XYZ
 % Загрузка таблиц
-lambda_start = 400;
-lambda_step = 10;
-lambda_end = 700;
+lambda_start = 480;
+lambda_step = 2;
+lambda_end = 110;
 LAMBDA = lambda_start:lambda_step:lambda_end;
 
 CIE_XYZ_1931 = xlsread('CIE tables.xls', 4);
