@@ -1,11 +1,9 @@
 #ifndef MODEL_H
 #define MODEL_H
-
 #ifndef GLEW_STATIC
 #define GLEW_STATIC
 #endif
 #include <GL/glew.h>
-
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #define STB_IMAGE_IMPLEMENTATION
@@ -13,10 +11,8 @@
 #include <assimp/Importer.hpp>
 #include <assimp/scene.h>
 #include <assimp/postprocess.h>
-
 #include "mesh.h"
 #include "shader.h"
-
 #include <string>
 #include <fstream>
 #include <sstream>
@@ -24,9 +20,7 @@
 #include <map>
 #include <vector>
 using namespace std;
-
 unsigned int TextureFromFile(const char *path, const string &directory, bool gamma = false);
-
 class Model 
 {
 public:
@@ -42,14 +36,12 @@ public:
     {
         loadModel(path);
     }
-
     // draws the model, and thus all its meshes
     void Draw(Shader shader)
     {
         for(unsigned int i = 0; i < meshes.size(); i++)
             meshes[i].Draw(shader);
     }
-    
 private:
     /*  Functions   */
     // loads a model with supported ASSIMP extensions from file and stores the resulting meshes in the meshes vector.
@@ -66,7 +58,6 @@ private:
         }
         // retrieve the directory path of the filepath
         directory = path.substr(0, path.find_last_of('/'));
-
         // process ASSIMP's root node recursively
         processNode(scene->mRootNode, scene);
     }
@@ -87,9 +78,7 @@ private:
         {
             processNode(node->mChildren[i], scene);
         }
-
     }
-
     Mesh processMesh(aiMesh *mesh, const aiScene *scene)
     {
         // data to fill
@@ -169,7 +158,6 @@ private:
         // return a mesh object created from the extracted mesh data
         return Mesh(vertices, indices, textures);
     }
-
     // checks all material textures of a given type and loads the textures if they're not loaded yet.
     // the required info is returned as a Texture struct.
     vector<Texture> loadMaterialTextures(aiMaterial *mat, aiTextureType type, string typeName)
@@ -203,8 +191,6 @@ private:
         return textures;
     }
 };
-
-
 unsigned int TextureFromFile(const char *path, const string &directory, bool gamma)
 {
     string filename = string(path);

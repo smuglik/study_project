@@ -1,0 +1,27 @@
+﻿  Source.cpp
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\shader.h(64): warning C4101: infoLog: неиспользованная локальная переменная
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\shader.h(63): warning C4101: success: неиспользованная локальная переменная
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(225): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(258): warning C4305: аргумент: усечение из "double" к "float"
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(261): warning C4305: аргумент: усечение из "double" к "float"
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(284): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(285): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(250): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note:  см. объявление "sprintf"
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(253): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note:  см. объявление "sprintf"
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(257): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note:  см. объявление "sprintf"
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(260): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note:  см. объявление "sprintf"
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(263): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note:  см. объявление "sprintf"
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(269): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note:  см. объявление "sprintf"
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(375): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(376): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(380): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(381): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(383): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(384): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\temp\study_project\lab_direction_lighting\lab_direction_lighting\source.cpp(391): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
